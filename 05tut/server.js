@@ -8,8 +8,9 @@ const logEvents = require("./logEvents");
 const EventEmitter = require("events");
 
 class Emitter extends EventEmitter {}
-// initialize object
+
 const myEmitter = new Emitter();
+
 myEmitter.on("log", (msg, fileName) => logEvents(msg, fileName));
 const PORT = process.env.port || 3500;
 
